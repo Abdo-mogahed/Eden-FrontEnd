@@ -1,0 +1,264 @@
+/* إعدادات عامة */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif; /* استخدام خط Poppins */
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, p, input, textarea, button {
+    font-family: 'Poppins', Arial, sans-serif; /* التأكد من استخدام الخط في جميع العناصر */
+  }
+  
+  .navbar {
+    background-color: #1D2A62;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+    height: 50px;
+    position: relative; /* يسمح بتحديد مكان القائمة المنسدلة */
+}
+
+.barbtns {
+    height: 27px;
+    width: 100px;
+    padding-top: 6px;
+
+}
+
+
+.navbar ul li a {
+
+     color: rgb(255, 255, 255);
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-decoration: none;
+     font-size: large;
+   
+}
+
+/* التنسيق الخاص بالقائمة المنسدلة */
+.navbar ul li .dropdown {
+    padding: 0;
+    display: none; /* إخفاء القائمة المنسدلة */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #87AECE; /* خلفية بيضاء للقائمة */
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    z-index: 2; /* وضع القائمة المنسدلة فوق العناصر الأخرى */
+}
+
+.navbar ul li:hover .dropdown {
+    display: block; /* إظهار القائمة عند التمرير فوق "Product" */
+}
+
+.navbar ul li .dropdown li {
+    padding: 10px 20px;
+}
+
+.navbar ul li .dropdown li a {
+    color: #1D2A62; /* نص باللون الأخضر الداكن */
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar ul li .dropdown li a:hover {
+    background-color: #1D2A62; /* تأثير عند التمرير على العنصر */
+    color: #fff; /* تغيير اللون إلى الأبيض عند التمرير */
+}
+
+.login-btn { /* الزر الخاص بتسجيل الدخول */
+  margin-top: 6px;
+  background-color: #fff;
+  color: #1D2A62;
+  padding: 8px 15px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  /* قسم About Us */
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background: #fff;
+    color: #000;
+  }
+  
+  .about-section h1 {
+    font-size: 70px;
+    color: #1D2A62;
+    margin-bottom: 10px;
+  }
+  
+  .about-section p {
+    max-width: 850px;
+    margin: 0px auto;
+    font-size: 20px;
+    color: #1D2A62;
+  }
+  
+  /* قسم Contact Us */
+  .contact-section {
+    background: url('../images/contact.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* تعديل الخلفية مع شفافية */
+    color: #fff;
+    padding: 50px 20px;
+    margin-bottom: -40px;
+
+}
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: 'Poppins', Arial, sans-serif;
+  }
+  
+  .contact-header h1 {
+    font-size: 80px;
+    color: #F5F3D8;
+  }
+  
+  .container {
+    display: flex; /* استخدام Flexbox لعرض المربعين بجانب بعض */
+    justify-content: space-between; /* وضع المسافة بين المربعين */
+    gap: 0px; /* إضافة مسافة بين المربعين */
+    flex-wrap: wrap; /* التأكد من بقاء المربعين جنبًا إلى جنب حتى مع تغيير حجم الشاشة */
+    margin: 0; /* توسيط العناصر في الصفحة */
+}
+
+.contact-form, .contact-info {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #FFFBFB;
+    padding: 30px; /* المسافة بين النص وحواف المربع */
+    border-radius: 20px; /* حواف دائرية */
+    color: #1D2A62;
+    flex-grow: 0; /* المربعات ستنمو لتشغل المساحة المتاحة */
+    min-width: 200px; /* تحديد الحد الأدنى للعرض */
+    max-width: 30%; /* تحديد الحد الأقصى للعرض بحيث يكون المربعين جنبًا إلى جنب */
+    height: 100%; /* اجعل الارتفاع يتناسب مع المربعات */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* توزيع المسافات داخل المربع */
+    align-items: stretch; /* اجعل المربعات تأخذ نفس الحجم */
+    flex: 1 1 30%;
+}
+
+
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-size: 16px;
+    color: #D1C7C7;
+    border-radius: 10px
+    
+  }
+  
+  .contact-form textarea {
+    resize: none;
+    height: 100px;
+    border-radius: 10px
+  }
+  
+  .contact-form button {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin-top: 20px;
+    padding: 8px 16px; /* تعديل الحشوة لجعل الزر أصغر */
+    background: #1D2A62;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px; /* جعل الخط أصغر قليلاً */
+    cursor: pointer;
+    width: 200px; /* عرض الزر يكون تلقائي حسب المحتوى */
+    align-self: center;
+}
+
+  
+  .contact-form button:hover {
+    background: #1D2A62;
+  }
+  
+  .contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #1D2A62
+  }
+  
+  .contact-info p {
+    margin: 15px 0;
+    color: #1D2A62
+  }
+
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  text-align: left;
+  padding-left: 11%;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  padding-top: 5px;
+}  
+.footer-section ul li:hover {
+  text-decoration: underline;
+}
+
+a {
+  color: inherit;      /* لجعل لون الرابط نفس لون النص */
+  text-decoration: none; /* لإلغاء خط تحت الرابط */
+}

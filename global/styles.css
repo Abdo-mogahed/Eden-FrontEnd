@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    background-color: #F5F3D8;
+    color: #1D2A62; 
+    font-weight: bold;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar {
+    background-color: #1D2A62;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 50px;
+}
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 40px;
+}
+.navbar ul li {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+.barbtns {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.navbar ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+.navbar ul li .dropdown {
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    background-color: #87AECE;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    min-width: 80px; /* عرض أصغر */
+    z-index: 2;
+}
+.navbar ul li:hover .dropdown {
+    display: block; /* إظهار القائمة عند التمرير فوق "Product" */
+}
+.navbar ul li .dropdown li {
+    padding: 4px 8px; /* padding أقل */
+}
+.navbar ul li .dropdown li a {
+    font-size: 0.8em;
+    text-align: center;
+}
+.navbar ul li .dropdown li a:hover {
+    background-color: #1D2A62; /* تأثير عند التمرير على العنصر */
+    color: #fff; /* تغيير اللون إلى الأبيض عند التمرير */
+}
+.login-btn {
+
+    background-color: #fff;
+    color: #1D2A62;
+    padding: 8px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown{
+    width: 175px;
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    background-color: #87AECE;
+    width: 6%;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center; 
+    height: 100vh;
+    align-items: center;
+}
+.sidebar img {
+    width: 30px;  
+    height: 30px;
+    margin: 10px 0; 
+    background-color: #F5F3D8; 
+    border-radius: 0px 10px 10px 0;
+    padding: 10px; 
+}
+.container-88{
+    /* background-color: red; */
+/* justify-content: center; */
+margin-top:-60px
+}
+
+.sidebar a:nth-child(2) img {
+    background-color: #1D2A62;
+}
+
+.content {
+    flex: 1;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: #1D2A62;;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #1D2A62;;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+    width: 750px;
+}
+ul li {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #1D2A62;;
+}
+
+.list123 {
+    list-style-type: disc; /* تغيير نوع النقاط */
+    padding-left: 20px; /* إضافة مسافة إلى اليسار للنقاط */
+    margin-top: 10px; /* مسافة فوق القائمة */
+    margin-bottom: 20px; /* مسافة تحت القائمة */
+    color: #1D2A62; /* لون النصوص داخل القائمة */
+    margin-left: 10px; /* مسافة إلى اليسار للقائمة */
+}
+
+.list123 li {
+    font-size: 1.2em; /* تحسين حجم النص */
+    line-height: 1.8; /* زيادة تباعد الأسطر */
+    margin-bottom: 10px; /* مسافة بين العناصر */
+}
+
+ul li {
+    margin-bottom: 10px; /* تحديد المسافة بين العناصر */
+}
+
+/*  */
+ul li span {
+    font-weight: bold;
+    color: #1D2A62;;   
+}
+.container-99{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 100px; */
+    margin-left:  180px;
+    margin-right: -100px;
+    /* margin-bottom: 100px; */
+    /* padding-left: 100px; */
+    /* margin-left: 10px; */
+    gap: 30px;
+}
+.icons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;  /* ترتيب الأيقونات عموديًا */
+    align-items: flex-end;   /* محاذاة الأيقونات إلى اليمين */
+    justify-content: center; /* محاذاة الأيقونات في المنتصف عموديًا */
+    position: absolute;      /* تعيين الأيقونات في مكان ثابت */
+    right: 20px;             /* مسافة من اليمين */
+    top: 50%;                /* محاذاة الأيقونات في منتصف الصفحة عموديًا */
+    transform: translateY(-50%); /* لضبط الأيقونات تمامًا في المنتصف عموديًا */
+}
+.icons img {
+    width: 650px;
+    height: 600px;
+    margin-bottom: 40px;  /* مسافة بين الأيقونات */
+}
+.dot {
+    width: 10px; /* حجم النقطة */
+    height: 10px;
+    background-color: #1D2A62; /* لون النقطة */
+    border-radius: 50%; /* لجعل النقطة دائرية */
+    display: inline-block; /* عرض النقطة بجانب النص */
+    margin-right: 8px; /* مسافة بسيطة بين النقطة والعنوان */
+}
+
+a {
+    color: inherit;      /* لجعل لون الرابط نفس لون النص */
+    text-decoration: none; /* لإلغاء خط تحت الرابط */
+  }

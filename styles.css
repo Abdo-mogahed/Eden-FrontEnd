@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: inherit;      /* لجعل لون الرابط نفس لون النص */
+    text-decoration: none; /* لإلغاء خط تحت الرابط */
+  }
+  
+body {
+    /* background-color: #F5F3D8; */
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f9f9f9; */
+    text-align: center;
+    color: #333;
+}
+
+.navbar {
+    background-color: #1D2A62;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+    height: 50px;
+    position: relative; /* يسمح بتحديد مكان القائمة المنسدلة */
+}
+
+.barbtns {
+    height: 27px;
+    width: 100px;
+    padding-top: 6px;
+
+}
+.navbar ul li a {
+
+     color: rgb(255, 255, 255);
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-decoration: none;
+     font-size: large;
+   
+}
+
+/* التنسيق الخاص بالقائمة المنسدلة */
+.navbar ul li .dropdown {
+    padding: 0;
+    display: none; /* إخفاء القائمة المنسدلة */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #87AECE; /* خلفية بيضاء للقائمة */
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    z-index: 2; /* وضع القائمة المنسدلة فوق العناصر الأخرى */
+}
+
+
+
+.navbar ul li:hover .dropdown {
+    display: block; /* إظهار القائمة عند التمرير فوق "Product" */
+}
+
+.navbar ul li .dropdown li {
+    padding: 10px 20px;
+}
+
+.navbar ul li .dropdown li a {
+    color: #1D2A62; /* نص باللون الأخضر الداكن */
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar ul li .dropdown li a:hover {
+    background-color: #1D2A62; /* تأثير عند التمرير على العنصر */
+    color: #fff; /* تغيير اللون إلى الأبيض عند التمرير */
+}
+
+
+.login-btn { /* الزر الخاص بتسجيل الدخول */
+    margin-top: 6px;
+    background-color: #fff;
+    color: #1D2A62;
+    padding: 8px 15px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* القسم الرئيسي بخلفية الصورة */
+.hero {
+    position: relative;
+    height: 100vh; /* تأكد أن القسم يغطي الشاشة بالكامل */
+    background: url('images/background.jpg') no-repeat center center/cover; /* إضافة الصورة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;}   
+
+.content { /*الكلام في نص الخلفية*/
+    position: relative;
+    z-index: 2; /* جعل النص فوق الـ overlay */
+    color: #fff; 
+}
+
+.content h1 { 
+    font-size: 3.5em;
+    margin-bottom: 15px;
+
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.buttons .btn { /*الازرار عموما*/
+    padding: 12px 25px;
+    font-size: 1em;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-yellow { /*Packages*/
+    background-color: #87AECE; 
+    color: #000;
+}
+
+.btn-green { /*Free Trail*/
+    background-color: #1D2A62; 
+    color: #fff;
+    width: 150px;
+    height: 80 px;
+}
+
+.btn-yellow:hover {
+    background-color: #6987a0;
+    color:#ffffff
+}
+
+.btn-green:hover {
+    background-color: #17224f;
+}
+
+/* خدمات */
+.services {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.services h1 {
+    font-size: 2.5rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #1D2A62;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: rgba(245, 243, 216, .5);
+    border-radius: 50%; /* تحويل المربع إلى دائرة */
+    width: 250px; /* حجم الدائرة */
+    height: 250px; /* ارتفاع الدائرة */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out; /* تأثير الحركة */
+}
+
+.service-card:hover {
+    transform: scale(1.1); /* تكبير الدائرة عند المرور */
+}
+
+.service-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1D2A62;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.play-btn {
+    background-color: #1D2A62;
+    color: #fff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.icon img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 15px;
+    margin-top: -30px;
+}
+
+.page-container{
+    margin-top: 60px;
+    background: rgba(245, 243, 216, .3);
+    display: flex;
+    justify-content: center; /* توسيط المحتوى أفقيًا */
+    align-items: center; /* توسيط المحتوى عموديًا */
+    min-height: 100vh; /* لتوسيط المحتوى عموديًا */
+    padding: 20px;
+    width: 100%; /* التأكد من أن الصفحة تأخذ العرض الكامل */
+    gap: 20px; /* مسافة بين النص والصورة */
+    padding-block: 100px;
+    height: 150px;
+    flex-direction: row; /* ترتيب النص والصورة جنبًا إلى جنب */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* مسافة بين النص والصورة */
+}
+
+/* For small screens to fit the cards */
+@media screen and (max-width: 768px) {
+    .services-container {
+        flex-direction: column; /* ترتيب العناصر عموديًا */
+        gap: 20px;
+    }
+}
+
+  
+.page-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 16px -6px rgba(0, 0, 0, 0.3);
+
+}
+
+/* تنسيق النص */
+.text-section {
+    margin-left: 50px; 
+}
+
+.text-section h1 {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: left;
+    color: #1D2A62; /* اللون الأزرق الداكن */
+    margin-bottom: 60px;
+    font-size: 2.5rem;
+}
+
+.text-section h3 , h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    color: #1D2A62;
+    padding-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+/* تنسيق العناصر في ul */
+.text-section ul {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 40px;
+    color: #1D2A62;
+    padding-left: 50px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* تنسيق كل عنصر li */
+.text-section li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 40px;
+    width: fit-content;
+    color: #1D2A62;
+    margin-bottom: 10px;
+}
+
+/* تنسيق الصورة */
+.image-section {
+    align-items: center;
+    margin-right: 50px;
+}
+
+.image-section img {
+    width: 400px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* إضافة ظل للصورة */
+    object-fit: cover; /* ملاءمة الصورة داخل الإطار */
+}
+
+/* تصميم متجاوب للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; /* ترتيب النص والصورة بشكل عمودي على الشاشات الصغيرة */
+        gap: 30px;
+    }
+
+    .text-section {
+        max-width: 100%; /* النص يشغل العرض الكامل */
+    }
+
+    .image-section {
+        max-width: 100%; /* الصورة تأخذ العرض الكامل */
+    }
+
+    .image-section img {
+        max-width: 100%;
+        border-radius: 15px; /* تعديل الزوايا للشاشات الصغيرة */
+    }
+}
+
+
+
+
+.features {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 65px;
+}
+.features h1 {
+  font-size: 46px;
+  font-weight: bold;
+  color: #1D2A62;
+  margin-bottom: 10px; /* قللناها من 20px ل 10px */
+}
+
+
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.feature {
+  background-color: rgba(245, 243, 216, .5);
+  padding: 50px 50px;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.feature:nth-child(1) {
+  border-radius: 50% 50% 0 50%; /* الأول مفتوح من تحت يمين */
+  margin-top: 30px;
+  margin-left: 375px;
+  margin-bottom: 10px;
+}
+
+
+.feature:nth-child(2) {
+  border-radius: 50% 50% 50% 0; /* التاني مفتوح من تحت شمال */
+  margin-left: 5px;
+  margin-top: 30px;
+
+}
+
+.feature:nth-child(3) {
+  border-radius: 50% 0 50% 50%; /* التالت مفتوح من فوق يمين */
+  margin-left: 375px;
+}
+
+.feature:nth-child(4) {
+  border-radius: 0 50%  50%  50%; /* الرابع مفتوح من فوق يمين */
+  margin-left: 5px;
+
+}
+
+
+
+.icon-wrapper {
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper img {
+  width: 60px;
+}
+
+.feature h2 {
+  font-size: 18px;
+  margin-bottom: -30px;
+  font-weight: bold;
+  color: #1D2A62;
+
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 5px 0;
+  color: #333;
+
+}
+
+
+.container {
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.top-benefits h1 {
+    font-size: 2.5rem;
+    color: #1D2A62;
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.benefit {
+    background-color: rgba(245, 243, 216, .5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.benefit img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.benefit h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1D2A62;
+}
+
+.benefit p {
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+.containercont {
+    background-color: rgba(245, 243, 216, .5);
+    border-radius: 15px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    margin-top: 40px;
+    margin-left: 335px;
+    text-align: center;
+  }
+
+
+
+  .containercont h2 {
+    font-size: 1.5rem;
+    color: #1D2A62;
+    text-align: center;
+  }
+
+  .containercont p {
+    font-size: 1rem;
+    color: #1D2A62;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+
+  .containercont a {
+    text-decoration: none;
+    background-color: #87AECE;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .containercont a:hover {
+    background-color: #60a5fa;
+  }
+
+  
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    text-align: left;
+    padding-left: 11%;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    padding-top: 5px;
+  }  
+  .footer-section ul li:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    
+    <div class="form-section">
+      <div class="welcome-text">
+        <h1>Get Started Now!</h1>
+    </div>
+    <form id="form">
+      <div class="tabs">
+        <div class="tab active" id="individual-tab" onclick="switchForm('individual')">Individual</div>
+        <div class="tab" id="corporate-tab" onclick="switchForm('corporate')">Corporate</div>
+      </div>
+
+
+      <form id="form">
+       
+        <div class="form-field">
+          <input type="text" id="name" placeholder="Type your name here">
+          <label for="name">Name</label>
+      </div>
+      
+        <div class="form-field">
+            <input type="email" id="email" placeholder="Enter your E-mail">
+            <label for="email">E-mail</label>
+        </div>
+    
+        <div class="form-field">
+            <input type="text" id="phone" placeholder="Enter your phone number">
+            <label for="phone">Phone</label>
+        </div>
+
+        <div id="additional-fields"></div>
+
+    
+        <div class="form-field">
+            <input type="password" id="password" placeholder="Enter your password">
+            <label for="password">Password</label>
+        </div>
+    
+        <div class="terms-link">
+            <label class="terms-label">
+                <input type="checkbox" id="terms">
+                <span>I agree to the <a href="#">terms & policy</a></span>
+            </label>
+        </div>
+    
+        <button type="submit">Sign Up</button>
+          <hr>
+        <p class="loginlogin">Already a user? <a href="../Login/html.html">Login</a></p>
+
+    </form>
+    
+
+
+    </div>
+    <div class="image-section"></div>
+  </div>
+  <div class="back-icon">
+    <a href="../EDEN.html">
+        <i class="fas fa-arrow-left"><img src="../images/home.png"></i>
+    </a>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
